@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 
     <style>
-
         html {
             scroll-behavior: smooth;
         }
@@ -94,8 +93,6 @@
         #releasenote .details {
             margin: 0px 30px;
         }
-
-
     </style>
 </head>
 
@@ -132,35 +129,43 @@
         <div id="download" class="wrapper">
             <h2>ダウンロード</h2>
             <ul class="nav nav-tabs" role="tablist">
+                <!-- <li class="nav-item">
+                    <a href="#windows" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-windows"></i>
+                        Windows</a>
+                </li> -->
                 <li class="nav-item">
-                    <a href="#windows" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-windows"></i> Windows</a>
+                    <a href="#macos" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-apple"></i>
+                        macOS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#macos" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-apple"></i> macOS</a>
+                    <a href="#ios" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-app-store-ios"></i>
+                        iOS</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#ios" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-app-store-ios"></i> iOS</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#android" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-android"></i> Android</a>
+                    <a href="#android" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-android"></i>
+                        Android</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div role="tabpanel" id="windows" class="tab-pane fade">
+                <!-- <div role="tabpanel" id="windows" class="tab-pane fade">
                     <p>Windows上で動かすには、Windows 10 Fall Creators Update以上でなければなりません。</p>
-                    <p class="download-badge"><a href="#"><img src="./img/microsoft-store-badge.png" alt="Microsoft Storeからダウンロード"></a></p>
-                </div>
+                    <p class="download-badge"><a href="#"><img src="./img/microsoft-store-badge.png"
+                                alt="Microsoft Storeからダウンロード"></a></p>
+                </div> -->
                 <div role="tabpanel" id="macos" class="tab-pane fade">
-                    <p>macOSで動かすには、macOS 10.13 High Sierra以上でなければなりません。</p>
-                    <p class="download-badge"><a href="#"><img src="./img/mac-app-store-badge.svg" alt="Mac App Storeからダウンロード"></a></p>
+                    <p>macOSで動かすには、macOS 10.14 Mojave以上でなければなりません。</p>
+                    <p class="download-badge"><a href="#"><img src="./img/mac-app-store-badge.svg"
+                                alt="Mac App Storeからダウンロード"></a></p>
                 </div>
                 <div role="tabpanel" id="ios" class="tab-pane fade">
-                    <p>iOSで動かすには、iOS 12.2以上でなければなりません。</p>
-                    <p class="download-badge"><a href="#"><img src="./img/app-store-badge.svg" alt="App Storeからダウンロード"></a></p>
+                    <p>iOSで動かすには、iOS 11以上でなければなりません。</p>
+                    <p class="download-badge"><a href="#"><img src="./img/app-store-badge.svg"
+                                alt="App Storeからダウンロード"></a></p>
                 </div>
                 <div role="tabpanel" id="android" class="tab-pane fade">
-                    <p>Androidで動かすには、Android 5.0 Lollipop以上でなければなりません。</p>
-                    <p class="download-badge"><a href="#"><img src="./img/google-play-badge.png" alt="Google Play ストアからダウンロード"></a></p>
+                    <p>Androidで動かすには、Android 4.4 KitKat以上でなければなりません。</p>
+                    <p class="download-badge"><a href="#"><img src="./img/google-play-badge.png"
+                                alt="Google Play ストアからダウンロード"></a></p>
                 </div>
             </div>
         </div>
@@ -168,7 +173,9 @@
         <div id="movie" class="wrapper">
             <h2>ムービー</h2>
             <div class="youtube">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/07EPI5CzxEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/07EPI5CzxEc" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
 
@@ -195,7 +202,7 @@
                     <li>セーブ・ロード機能</li>
                     <li>確定したパスを後から変更する機能</li>
                 </ul>
-                
+
             </div>
         </div>
 
@@ -204,38 +211,38 @@
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/pgwbrowser.min.js"></script>
-    
+
     <script>
-    $(function(){
-        $('.download-badge a').click(function() {
-            alert("現在アプリの配信の準備をしています。\nもうしばらくお待ち下さい。");
-            return false;
+        $(function () {
+            $('.download-badge a').click(function () {
+                alert("現在アプリの配信の準備をしています。\nもうしばらくお待ち下さい。");
+                return false;
+            });
+
+
+            var pgwBrowser = $.pgwBrowser();
+            switch (pgwBrowser.os.group) {
+                // case "Windows":
+                //     $('.nav-item a[href="#windows"]').addClass("active");
+                //     $('#windows').addClass("active").addClass("show");
+                //     break;
+                case "Mac OS":
+                    $('.nav-item a[href="#macos"]').addClass("active");
+                    $('#macos').addClass("active").addClass("show");
+                    break;
+                case "Android":
+                    $('.nav-item a[href="#android"]').addClass("active");
+                    $('#android').addClass("active").addClass("show");
+                    break;
+                case "iOS":
+                default:
+                    $('.nav-item a[href="#ios"]').addClass("active");
+                    $('#ios').addClass("active").addClass("show");
+                    break;
+            }
+
+
         });
-
-
-        var pgwBrowser = $.pgwBrowser();
-        switch (pgwBrowser.os.group) {
-            default:
-            case "Windows":
-                $('.nav-item a[href="#windows"]').addClass("active");
-                $('#windows').addClass("active").addClass("show");
-                break;
-            case "Mac OS":
-                $('.nav-item a[href="#macos"]').addClass("active");
-                $('#macos').addClass("active").addClass("show");
-                break;
-            case "iOS":
-                $('.nav-item a[href="#ios"]').addClass("active");
-                $('#ios').addClass("active").addClass("show");
-                break;
-            case "Android":
-                $('.nav-item a[href="#android"]').addClass("active");
-                $('#android').addClass("active").addClass("show");
-                break;
-        }
-
-
-    });
     </script>
 
 
