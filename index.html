@@ -192,25 +192,40 @@
           <li>
             編集の機能
             <ul>
-              <li>ツール</li>
-              <ul>
-                <li>ペン機能(色とスクリーントーンとペン幅を設定可能)</li>
-                <li>ピクセル消しゴム機能</li>
-                <li>オブジェクト消しゴム機能</li>
-              </ul>
-              <li>ページ機能</li>
-              <ul>
-                <li>ページの移動機能</li>
-                <li>作品の再生機能</li>
-              </ul>
-              <li>その他</li>
-              <ul>
-                <li>やり直し・取り消し機能</li>
-                <li>レイヤー機能</li>
-                <li>単一レイヤー、すべてのレイヤーのクリア機能</li>
-                <li>セーブ・ロード機能</li>
-                <li>マルチフィンガージェスチャーでキャンバスの拡大縮小、移動、回転</li>
-              </ul>
+              <li>
+                ツール
+                <ul>
+                  <li>ペン機能(色とスクリーントーンとペン幅(絶対・相対)を設定可能)</li>
+                  <li>ピクセル消しゴム機能</li>
+                  <li>オブジェクト消しゴム機能</li>
+                  <li>図形描画モード機能</li>
+                </ul>
+              </li>
+              <li>
+                レイヤーの編集機能
+                <ul>
+                  <li>レイヤーの表示・非表示</li>
+                  <li>ページ透かし(ライトボックス)機能</li>
+                  <li>背景色変更機能</li>
+                </ul>
+              </li>
+              <li>
+                ページ機能
+                <ul>
+                  <li>ページの移動機能</li>
+                  <li>作品の再生機能</li>
+                </ul>
+              </li>
+              <li>
+                その他
+                <ul>
+                  <li>やり直し・取り消し機能</li>
+                  <li>単一レイヤー、すべてのレイヤーのクリア機能</li>
+                  <li>セーブ・ロード機能</li>
+                  <li>マルチフィンガージェスチャーでキャンバスの拡大縮小、移動、回転</li>
+                  <li>手ぶれ補正機能</li>
+                </ul>
+              </li>
             </ul>
           </li>
 
@@ -235,11 +250,9 @@
             レイヤーの高度な編集機能
             <ul>
               <li>レイヤーの入れ替え</li>
-              <li>レイヤーの表示・非表示</li>
               <li>色置換機能</li>
             </ul>
           </li>
-          <li>ページ透かし(ライトボックス)機能</li>
         </ul>
 
       </div>
@@ -269,10 +282,10 @@
           $('.nav-item a[href="#macos"]').addClass("active");
           $('#macos').addClass("active").addClass("show");
           break;
-        case "Android":
-          $('.nav-item a[href="#android"]').addClass("active");
-          $('#android').addClass("active").addClass("show");
-          break;
+        // case "Android":
+        //  $('.nav-item a[href="#android"]').addClass("active");
+        //  $('#android').addClass("active").addClass("show");
+        //  break;
         case "iOS":
         default:
           $('.nav-item a[href="#ios"]').addClass("active");
