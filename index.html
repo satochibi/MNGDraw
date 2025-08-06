@@ -2,17 +2,25 @@
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>MNGDraw</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Font Awesome 5 -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 
   <style>
     html {
       scroll-behavior: smooth;
+    }
+
+    .btn-primary {
+      background: #0272ED;
+    }
+
+    a {
+      color: #0272ED;
     }
 
     body {
@@ -25,6 +33,14 @@
       background-color: #F07238;
     }
 
+    nav.navbar a {
+      color: #1F1F1F;
+    }
+
+    nav.navbar a:hover {
+      text-decoration: underline;
+    }
+
     div.wrapper {
       background-color: white;
       border-radius: 0.3rem;
@@ -34,13 +50,12 @@
     }
 
     h2 {
-      background: #F07238;
       font-size: 130%;
       text-indent: 15px;
       padding: 9px 0;
-      border-radius: 10px;
+      border-left: #F07238 solid 5px;
       margin: 0 0 10px;
-      color: #fff;
+      color: black;
     }
 
     h3 {
@@ -59,6 +74,11 @@
       padding: 10px;
     }
 
+    .tab-content img {
+      display: block;
+      margin: 0 auto;
+    }
+
     .nav-tabs {
       margin-bottom: 0;
     }
@@ -75,6 +95,7 @@
       right: 0;
       width: 100% !important;
       height: 100% !important;
+      border: none;
     }
 
     .download-badge img {
@@ -97,9 +118,9 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+  <nav class="navbar navbar-expand-sm fixed-top">
     <a href="#" class="navbar-brand">
-      <img src="./img/MNGDrawLogo.png" height="30" alt="MNGDraw" />
+      <img src="./img/MNGDrawLogo.png" height="30" alt="MNGDraw">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu1" aria-controls="navmenu1"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -118,9 +139,9 @@
     <div class="jumbotron mt-4">
       <h1 class="display-4">MNGDrawとは</h1>
       <p class="lead">
-        スクリーントーンの情報を保証するドローソフトウェアのパラパラ漫画作成ツールです。<br />
+        スクリーントーンの情報を保証するドローソフトウェアのパラパラ漫画作成ツールです。<br>
       </p>
-      <hr class="my-4" />
+      <hr class="my-4">
       <a class="btn btn-primary btn-lg" href="#download" role="button">
         <i class="fas fa-download"></i> 今すぐダウンロード
       </a>
@@ -129,13 +150,17 @@
     <div id="download" class="wrapper">
       <h2>ダウンロード</h2>
       <ul class="nav nav-tabs" role="tablist">
-        <!-- <li class="nav-item">
-                    <a href="#windows" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-windows"></i>
-                        Windows</a>
-                </li> -->
+        <li class="nav-item">
+          <a href="#windows" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-windows"></i>
+            Windows</a>
+        </li>
         <li class="nav-item">
           <a href="#macos" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-apple"></i>
             macOS</a>
+        </li>
+        <li class="nav-item">
+          <a href="#linux" class="nav-link" role="tab" data-toggle="tab"><i class="fa-brands fa-linux"></i>
+            Linux</a>
         </li>
         <li class="nav-item">
           <a href="#ios" class="nav-link" role="tab" data-toggle="tab"><i class="fab fa-app-store-ios"></i>
@@ -147,22 +172,26 @@
         </li> -->
       </ul>
       <div class="tab-content">
-        <!-- <div role="tabpanel" id="windows" class="tab-pane fade">
-                    <p>Windows上で動かすには、Windows 10 Fall Creators Update以上でなければなりません。</p>
-                    <p class="download-badge"><a href="#"><img src="./img/microsoft-store-badge.png"
-                                alt="Microsoft Storeからダウンロード"></a></p>
-                </div> -->
+        <div role="tabpanel" id="windows" class="tab-pane fade">
+          <p>Windows上で動かすには、Windows 10以上でなければなりません。</p>
+          <p class="download-badge"><a href="#"><img src="./img/microsoft-store-badge.png"
+                alt="Microsoft Storeからダウンロード"></a></p>
+        </div>
         <div role="tabpanel" id="macos" class="tab-pane fade">
-          <p>macOSで動かすには、macOS 10.15 Catalina以上でなければなりません。</p>
+          <p>macOSで動かすには、macOS 10.14 Catalina以上でなければなりません。</p>
           <p class="download-badge"><a href="#"><img src="./img/mac-app-store-badge.svg"
                 alt="Mac App Storeからダウンロード"></a></p>
+        </div>
+        <div role="tabpanel" id="linux" class="tab-pane fade">
+          <p class="download-badge"><a href="#"><img src="./img/snapcraft-seeklogo-2.svg" alt="">Snapcraftからダウンロード</a>
+          </p>
         </div>
         <div role="tabpanel" id="ios" class="tab-pane fade">
           <p>iOSで動かすには、iOS 13以上でなければなりません。</p>
           <p class="download-badge"><a href="#"><img src="./img/app-store-badge.svg" alt="App Storeからダウンロード"></a></p>
         </div>
         <!-- <div role="tabpanel" id="android" class="tab-pane fade">
-          <p>Androidで動かすには、Android 13以上でなければなりません。</p>
+          <p>Androidで動かすには、Android 6.0以上でなければなりません。</p>
           <p class="download-badge"><a href="#"><img src="./img/google-play-badge.png"
                 alt="Google Play ストアからダウンロード"></a></p>
         </div> -->
@@ -172,16 +201,16 @@
     <div id="movie" class="wrapper">
       <h2>ムービー</h2>
       <div class="youtube">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/07EPI5CzxEc" frameborder="0"
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/07EPI5CzxEc"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
 
     <div id="releasenote" class="wrapper">
       <h2>リリースノート</h2>
-      <h3>202X/XX/XX ver0.1.0 初期バージョン<br>(リリース日は未定です)</h3>
+      <h3>202X/XX/XX ver0.0.0 初期バージョン<br>(リリース日は未定です)</h3>
       <div class="details">
-        <h4 class="alert alert-success" role="alert"><i class="fas fa-check-circle"></i> 主に実装した機能</h4>
+        <h4 class="alert alert-success"><i class="fas fa-check-circle"></i> 主に実装した機能</h4>
         <ul>
           <li>
             全般の機能
@@ -190,7 +219,7 @@
             </ul>
           </li>
           <li>
-            編集の機能
+            「描く」の機能
             <ul>
               <li>
                 ツール
@@ -198,7 +227,16 @@
                   <li>ペン機能(色とスクリーントーンとペン幅(絶対・相対)を設定可能)</li>
                   <li>ピクセル消しゴム機能</li>
                   <li>オブジェクト消しゴム機能</li>
-                  <li>図形描画モード機能</li>
+                  <li>
+                    図形描画モード機能
+                    <ul>
+                      <li>直線</li>
+                      <li>長方形</li>
+                      <li>正方形</li>
+                      <li>楕円</li>
+                      <li>円</li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -213,7 +251,17 @@
                 ページ機能
                 <ul>
                   <li>ページの移動機能</li>
-                  <li>作品の再生機能</li>
+                  <li>作品の再生機能(再生・一時停止、先頭・末尾に戻る)</li>
+                  <li>作品の再生設定機能(ワンショット・ループ、FPS値の設定)</li>
+                </ul>
+              </li>
+              <li>
+                タイムラインエディタ
+                <ul>
+                  <li>ページの削除</li>
+                  <li>ページの追加</li>
+                  <li>ページのコピー</li>
+                  <li>ページの貼付</li>
                 </ul>
               </li>
               <li>
@@ -228,28 +276,41 @@
                 <ul>
                   <li>やり直し・取り消し機能</li>
                   <li>単一レイヤー、すべてのレイヤーのクリア機能</li>
-                  <li>セーブ・ロード機能</li>
+                  <li>セーブ・ロード機能(複数作品管理可能)</li>
                   <li>手ぶれ補正機能</li>
                 </ul>
               </li>
             </ul>
           </li>
-
-
+          <li>
+            「見る」の機能
+            <ul>
+              <li>自分の描いた作品を再生</li>
+              <li>自分の描いた作品を削除</li>
+              <li>
+                自分の描いた作品を変換
+                <ul>
+                  <li>単一ページのPNG変換</li>
+                  <li>連番のPNG変換</li>
+                  <li>アニメーションGIF変換</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
-        <h4 class="alert alert-info" role="alert"><i class="fas fa-cog"></i> 設定の機能</h4>
+        <h4 class="alert alert-info"><i class="fas fa-cog"></i> 設定の機能</h4>
         <ul>
           <li>スクリーントーンのスケール(細かさ)の設定</li>
           <li>クリッピングの設定</li>
         </ul>
-        <h4 class="alert alert-danger" role="alert"><i class="fas fa-times-circle"></i> 未実装の機能</h4>
+        <h4 class="alert alert-danger"><i class="fas fa-times-circle"></i> 未実装の機能</h4>
         <ul>
           <li>
-            ページの高度な編集機能
+            タイムラインエディタのレイヤー単位の編集機能
             <ul>
-              <li>コピー</li>
               <li>削除</li>
-              <li>切り取り</li>
+              <li>コピー</li>
+              <li>貼付</li>
             </ul>
           </li>
           <li>
@@ -257,6 +318,21 @@
             <ul>
               <li>レイヤーの入れ替え</li>
               <li>色置換機能</li>
+            </ul>
+          </li>
+          <li>
+            ツールの高度な編集機能
+            <ul>
+              <li>塗りつぶし機能</li>
+              <li>
+                パス・レイヤー単位での変形機能
+                <ul>
+                  <li>投げ縄ツール</li>
+                  <li>左右・上下反転</li>
+                  <li>移動</li>
+                  <li>回転</li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -280,13 +356,17 @@
 
       var pgwBrowser = $.pgwBrowser();
       switch (pgwBrowser.os.group) {
-        // case "Windows":
-        //     $('.nav-item a[href="#windows"]').addClass("active");
-        //     $('#windows').addClass("active").addClass("show");
-        //     break;
+        case "Windows":
+          $('.nav-item a[href="#windows"]').addClass("active");
+          $('#windows').addClass("active").addClass("show");
+          break;
         case "Mac OS":
           $('.nav-item a[href="#macos"]').addClass("active");
           $('#macos').addClass("active").addClass("show");
+          break;
+        case "Linux":
+          $('.nav-item a[href="#linux"]').addClass("active");
+          $('#linux').addClass("active").addClass("show");
           break;
         // case "Android":
         //  $('.nav-item a[href="#android"]').addClass("active");
