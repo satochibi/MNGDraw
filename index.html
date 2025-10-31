@@ -218,7 +218,7 @@
 
     <div id="releasenote" class="wrapper">
       <h2>リリースノート</h2>
-      <h3>202X/XX/XX ver0.0.0 初期バージョン<br>(リリース日は未定です)</h3>
+      <h3>202X/XX/XX ver0.0.1 初期バージョン<br>(リリース日は未定です)</h3>
       <div class="details">
         <h4 class="alert alert-success"><i class="fas fa-check-circle"></i> 主に実装した機能</h4>
         <ul>
@@ -268,10 +268,25 @@
               <li>
                 タイムラインエディタ
                 <ul>
-                  <li>ページの削除</li>
-                  <li>ページの追加</li>
-                  <li>ページのコピー</li>
-                  <li>ページの貼付</li>
+                  <li>
+                    ページ単位
+                    <ul>
+                      <li>削除</li>
+                      <li>前に追加、後ろに追加</li>
+                      <li>コピー</li>
+                      <li>貼付</li>
+                      <li>重ね貼り</li>
+                    </ul>
+                  </li>
+                  <li>
+                    レイヤー単位
+                    <ul>
+                      <li>削除</li>
+                      <li>コピー</li>
+                      <li>貼付</li>
+                      <li>重ね貼り</li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -284,7 +299,7 @@
               <li>
                 その他
                 <ul>
-                  <li>やり直し・取り消し機能</li>
+                  <li>やり直し・取り消し機能(スーパーUndo対応)</li>
                   <li>単一レイヤー、すべてのレイヤーのクリア機能</li>
                   <li>セーブ・ロード機能(複数作品管理可能)</li>
                   <li>手ぶれ補正機能</li>
@@ -315,14 +330,7 @@
         </ul>
         <h4 class="alert alert-danger"><i class="fas fa-times-circle"></i> 未実装の機能</h4>
         <ul>
-          <li>
-            タイムラインエディタのレイヤー単位の編集機能
-            <ul>
-              <li>削除</li>
-              <li>コピー</li>
-              <li>貼付</li>
-            </ul>
-          </li>
+
           <li>
             レイヤーの高度な編集機能
             <ul>
