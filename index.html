@@ -119,6 +119,38 @@
     p.download-badge {
       text-align: center;
     }
+
+    .blockquote {
+      display: inline-block;
+      position: relative;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #444;
+      padding: 0.5rem 3rem;
+      margin: 1.5rem 0;
+    }
+
+    .blockquote::before {
+      content: "\201C";
+      font-size: 5rem;
+      font-family: Georgia, serif;
+      color: #F07238;
+      position: absolute;
+      left: 0;
+      top: -1rem;
+      line-height: 1;
+    }
+
+    .blockquote::after {
+      content: "\201D";
+      font-size: 5rem;
+      font-family: Georgia, serif;
+      color: #F07238;
+      position: absolute;
+      right: 0;
+      bottom: -2.5rem;
+      line-height: 1;
+    }
   </style>
 </head>
 
@@ -143,6 +175,11 @@
   <div class="container">
     <div class="p-5 mb-4 bg-light rounded-3 mt-4">
       <h1 class="display-5 fw-bold">MNGDrawとは</h1>
+      <blockquote class="blockquote">
+        <p>
+          アニメがうごく。心がうごく。
+        </p>
+      </blockquote>
       <p class="col-md-8 fs-5">
         スクリーントーンの情報を保証するドローソフトウェアのパラパラ漫画作成ツールです。<br>
       </p>
