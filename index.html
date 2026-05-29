@@ -283,13 +283,12 @@
         "Mac OS": "macos",
         "Linux": "linux",
         "iOS": "ios",
+        "Android": "android"
       };
-      var target = tabMap[os] || "ios";
+      var target = tabMap[os];
       var targetTab = document.querySelector('[data-bs-target="#' + target + '"]');
-      var targetPane = document.querySelector('#' + target);
-      if (targetTab && targetPane) {
-        var tab = new bootstrap.Tab(targetTab);
-        tab.show();
+      if (targetTab) {
+        new bootstrap.Tab(targetTab).show();
       }
     });
   </script>
