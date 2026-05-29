@@ -160,7 +160,7 @@
       <img src="./img/MNGDrawLogo.png" height="30" alt="MNGDraw">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu1"
-      aria-controls="navmenu1" aria-expanded="false" aria-label="Toggle navigation">
+      aria-controls="navmenu1" aria-expanded="false" aria-label="メニューを開く">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navmenu1">
@@ -269,6 +269,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // ダウンロードリンクをクリックしたときに、アラートを表示する
       document.querySelectorAll('.download-badge a').forEach(function (a) {
         a.addEventListener('click', function (e) {
           e.preventDefault();
@@ -276,6 +277,7 @@
         });
       });
 
+      // ブラウザのユーザーエージェントを解析して、OSに対応するタブを自動的に選択する
       var pgwBrowser = $.pgwBrowser();
       var os = pgwBrowser.os.group;
       var tabMap = {
@@ -289,6 +291,18 @@
       var targetTab = document.querySelector('[data-bs-target="#' + target + '"]');
       if (targetTab) {
         new bootstrap.Tab(targetTab).show();
+      }
+
+      // ハンバーガーメニューのフォーカスが外れたときにタブを自動的に閉じる
+      var movieLink = document.querySelector('.nav-link[href="#movie"]');
+      var navMenu = document.getElementById('navmenu1');
+      if (movieLink && navMenu) {
+        movieLink.addEventListener('blur', function (e) {
+          if (!navMenu.contains(e.relatedTarget)) {
+            var bsCollapse = bootstrap.Collapse.getInstance(navMenu) || new bootstrap.Collapse(navMenu, { toggle: false });
+            bsCollapse.hide();
+          }
+        });
       }
     });
   </script>
